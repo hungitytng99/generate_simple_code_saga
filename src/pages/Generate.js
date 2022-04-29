@@ -61,8 +61,10 @@ function Generate(props) {
                 };<br/>
             }<br/>
             case ${actionName}_SUCCESS().type: {<br/>
+                const{ data } = action.payload;<br/>
                 return {<br/>
                     ...state,<br/>
+                    data: data,<br/>
                     state: REQUEST_STATE.SUCCESS,<br/>
                 };<br/>
             }<br/>
