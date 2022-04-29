@@ -98,7 +98,7 @@ function Generate(props) {
                 const response = yield call(${apiCallName} ${actionParams ? `,{${actionParams}}` : ""});<br/>
                 if (response.state === REQUEST_STATE.SUCCESS) {<br/>
                     yield put(${actionName}_SUCCESS({<br/>
-                        data: response<br/>
+                        data: response?.data<br/>
                     }));<br/>
                 } else {<br/>
                     yield put(${actionName}_FAIL());<br/>
