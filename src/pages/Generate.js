@@ -46,7 +46,7 @@ function Generate(props) {
         `)
 
         resultTemp = addToResult(resultTemp, `
-            dispatch(${actionName}(${actionParams ? `${actionParams}` : ""}));
+            dispatch(${actionName}(${actionParams ? `{${actionParams}}` : ""}));
         `)
 
         resultTemp = addToResult(resultTemp, `
